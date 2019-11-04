@@ -9,5 +9,5 @@ jobs:
         - run: cd ci &&
             mkdir build &&
             cd build &&
-            cmake ../my_stl &&
+            cmake -D BUILD_UNIT_TESTS=On ../my_stl &&
             ctest -D Continuous
