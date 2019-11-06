@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/src/set/set.cpp
+set.hpp
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/src/set/set.hpp
+
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/src/set/set.hpp
+iostream
+-
+

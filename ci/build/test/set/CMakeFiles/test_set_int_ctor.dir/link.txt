@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/test_set_int_ctor.dir/test_int_ctor.cpp.o  -o ../../bin/test_set_int_ctor ../../src/libmy_stl.a 

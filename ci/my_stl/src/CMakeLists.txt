@@ -17,6 +17,6 @@ endmacro()
 #set_target_properties(my_stl PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 build_lib(my_stl_static STATIC)
-build_lib(my_stl_shared SHARED)
+#build_lib(my_stl_shared SHARED)
 
-install(TARGETS my_stl_static my_stl_shared RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+install(TARGETS my_stl_static RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)

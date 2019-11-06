@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/src/stack/stack.hpp
+cassert
+-
+new
+-
+
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/src/string/string.hpp
+iostream
+-
+vector
+-
+
+/Users/mdecker/teaching/software-engineering-examples/ci/my_stl/test/stack/test_ctor_default.cpp
+cassert
+-
+iostream
+-
+stack.hpp
+-
+string.hpp
+-
+

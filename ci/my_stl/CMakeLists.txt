@@ -2,13 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 project(my_stl)
 
 # Put the build information in the directory that uses it
-
-# Enables testing for this directory and below
-enable_testing()
-# enables creations/submission of dashbards (cdash).  Calls enable_testing()
 include(CTest)
 
-option(BUILD_UNIT_TESTS "Build unit tests for my_stl" OFF)
+option(BUILD_UNIT_TESTS "Build unit tests for my_stl" ON)
 
 # include/link search path
 include_directories(src/set/ src/stack src/string)

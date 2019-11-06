@@ -10,4 +10,4 @@ jobs:
             mkdir build &&
             cd build &&
             cmake -D BUILD_UNIT_TESTS=On ../my_stl &&
-            ctest -D Continuous
+            ctest

@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/test_stack_empty.dir/test_empty.cpp.o  -o ../../bin/test_stack_empty ../../src/libmy_stl.a 

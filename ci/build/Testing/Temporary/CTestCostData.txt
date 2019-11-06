@@ -1,0 +1,26 @@
+test_set_default_ctor 1 0.00311383
+test_set_int_ctor 1 0.00300269
+test_stack_assign 1 0.00278848
+test_stack_ctor_copy 1 0.00273209
+test_stack_ctor_default 1 0.00315155
+test_stack_empty 1 0.00281538
+test_stack_push_pop 1 0.00301307
+test_stack_swap 1 0.00285171
+test_str_concat 1 0.00401666
+test_str_ctor_char 1 0.00297116
+test_str_ctor_charArray 1 0.00267082
+test_str_ctor_copy 1 0.00324419
+test_str_ctor_default 1 0.00297853
+test_str_equal 1 0.00301781
+test_str_find_char 1 0.002736
+test_str_find_string 1 0.00291416
+test_str_greaterThan 1 0.00332546
+test_str_input 0 0
+test_str_len_cap 1 0.0028592
+test_str_lessThan 1 0.00320991
+test_str_split 1 0.00325446
+test_str_subscript 1 0.00280033
+test_str_substring 1 0.00274879
+test_str_swap_assign 1 0.00282029
+---
+test_str_input
