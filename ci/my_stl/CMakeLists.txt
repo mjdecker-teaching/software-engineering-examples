@@ -12,7 +12,8 @@ include_directories(src/set/ src/stack src/string)
 # for current directory and below
 if(${CMAKE_COMPILER_IS_GNUCXX})
     # coverage is gcc only
-    add_definitions(-fPIC -std=c++0x -g -O0 -fprofile-arcs -ftest-coverage)
+#    add_definitions(-fPIC -std=c++0x -g -O0 -fprofile-arcs -ftest-coverage)
+    add_definitions(-fPIC -std=c++0x -g -O0)
 elseif("x${CMAKE_CXX_COMPILER_ID}" STREQUAL "xClang")
     add_definitions(-std=c++11)
 else()
