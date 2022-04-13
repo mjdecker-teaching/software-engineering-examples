@@ -9,6 +9,6 @@ jobs:
         - run: apt install -y git ssh cmake g++
         - checkout
         - run: mkdir build
-        - run: cd build && cmake ..
-        - run: cd build && make ..
+        - run: cd build && cmake ../ci/my_stl
+        - run: cd build && make
         - run: cd build && ctest
