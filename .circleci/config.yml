@@ -6,7 +6,7 @@ jobs:
         - image: srcml/ubuntu:21.10
       steps:
         - run: apt update
-        - run: apt install git ssh
+        - run: apt install -y git ssh
         - checkout
         - run: cd ci/my_stl
         - run: mkdir build
