@@ -5,7 +5,7 @@ jobs:
       docker:
         - image: srcml/ubuntu:21.10
       steps:
-        - run: yes | apt update
+        - run: apt update
         - run: apt install git ssh
         - checkout
         - run: cd ci/my_stl
