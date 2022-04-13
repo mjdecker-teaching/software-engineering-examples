@@ -19,7 +19,6 @@ int main ()
         String  str;
 	
 	std::ifstream input("log_1_tiny.txt");
-	return 0;
 	assert(input.is_open());
 	
         // VERIFY
