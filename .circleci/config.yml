@@ -3,7 +3,7 @@ version: 2
 jobs:
     build:
       docker:
-        - image: srcml/ubuntu_x86_64_base
+        - image: srcml/ubuntu:21.10
       steps:
         - checkout
         - run: cd ci/my_stl
