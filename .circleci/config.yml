@@ -1,4 +1,4 @@
-# Simple Setup
+# A Simple Setup
 version: 2
 jobs:
     build:
