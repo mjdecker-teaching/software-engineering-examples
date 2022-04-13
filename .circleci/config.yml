@@ -6,7 +6,7 @@ jobs:
         - image: srcml/ubuntu:21.10
       steps:
         - run: apt update
-        - run: apt install -y git ssh
+        - run: apt install -y git ssh cmake g++
         - checkout
         - run: cd ci/my_stl
         - run: mkdir build
