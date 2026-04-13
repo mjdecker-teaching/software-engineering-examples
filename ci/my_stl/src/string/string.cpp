@@ -1,22 +1,21 @@
 #include "string.hpp"
 
-
-String::String() {
+string_t::string_t() {
   string_size = 1;
   str = new char[string_size];
   str[0] = '\0';
 }
 
-String::String(char ch) {
+string_t::string_t(char ch) {
   string_size = 2;
   str = new char[string_size];
   str[0] = ch;
   str[1] = '\0';
 }
 
-String::String(const char cString[]) {
+string_t::string_t(const char cstring_t[]) {
   int len = 0;
-  while (cString[len] != '\0') {
+  while (cstring_t[len] != '\0') {
     ++len;
   }
   
@@ -24,13 +23,13 @@ String::String(const char cString[]) {
   str = new char[string_size];
   
   for (int i = 0; i < len; ++i) {
-    str[i] = cString[i];
+    str[i] = cstring_t[i];
   }
 
   str[len] = '\0';
 }
 
-String::String(const String& other) {
+string_t::string_t(const string_t& other) {
   string_size = other.string_size;
   str = new char[string_size];
 
@@ -43,13 +42,13 @@ String::String(const String& other) {
   str[index] = other.str[index];
 }
 
-String::String(int size) {
+string_t::string_t(int size) {
   string_size = size;
   str = new char[string_size];
   str[0] = '\0';
 }
 
-String::String(int size, const char* other) {
+string_t::string_t(int size, const char* other) {
   string_size = size;
   str = new char[string_size];
 
@@ -62,11 +61,11 @@ String::String(int size, const char* other) {
   str[index] = other[index];
 }
 
-String::~String(){
+string_t::~string_t(){
   delete[] str;
 }
 
-void String::reset_capacity (int size) {
+void string_t::reset_capacity (int size) {
   char* temp = str;
   string_size = size;
   str = new char[string_size];
@@ -81,11 +80,11 @@ void String::reset_capacity (int size) {
   delete[] temp;
 }
 
-int String::capacity() const {
+int string_t::capacity() const {
   return string_size - 1;
 }
 
-int String::length() const {
+int string_t::length() const {
   int len = 0;
   
   while(str[len] != '\0') {
@@ -95,9 +94,9 @@ int String::length() const {
   return len;
 }
 
-String String::substr(int start_pos, int count) const {  
+string_t string_t::substr(int start_pos, int count) const {  
   int str_len = length();
-  String sub;
+  string_t sub;
 
   for (int i = 0; i < count; ++i) {
     if ((start_pos + i) > str_len)
@@ -110,10 +109,10 @@ String String::substr(int start_pos, int count) const {
 }
 
 
-std::vector<String> String::split(char delim) const {
+std::vector<string_t> string_t::split(char delim) const {
   int str_len = length();
-  String temp;
-  std::vector<String> fields;
+  string_t temp;
+  std::vector<string_t> fields;
 
   for (int i = 0; i < str_len; ++i) {
     if (str[i] == delim) {
@@ -128,7 +127,7 @@ std::vector<String> String::split(char delim) const {
   return fields;
 }
 
-int String::find(char ch, int start_pos) const {
+int string_t::find(char ch, int start_pos) const {
   int pos = -1;
   
   if (start_pos >= length())
@@ -144,7 +143,7 @@ int String::find(char ch, int start_pos) const {
   return pos;
 }
 
-int String::find(const String & s, int start_pos) const {
+int string_t::find(const string_t & s, int start_pos) const {
   int pos = find(s.str[0], start_pos);
   bool found = false;
   int sub_len = s.length();
@@ -167,7 +166,7 @@ int String::find(const String & s, int start_pos) const {
   return pos;
 }
 
-void String::swap(String& other) {
+void string_t::swap(string_t& other) {
   char* temp = str;
   str = other.str;
   other.str = temp;
@@ -177,12 +176,12 @@ void String::swap(String& other) {
   other.string_size = temp_size;
 }
 
-String& String::operator=(String rhs) {
+string_t& string_t::operator=(string_t rhs) {
   swap(rhs);
   return *this;
 }
 
-bool String::operator==(const String& rhs) const {
+bool string_t::operator==(const string_t& rhs) const {
   int index = 0;
   
   while (str[index] != '\0' && rhs.str[index] != '\0') {
@@ -195,7 +194,7 @@ bool String::operator==(const String& rhs) const {
   return str[index] == rhs.str[index];
 }
 
-bool String::operator< (const String& rhs)  const {
+bool string_t::operator< (const string_t& rhs)  const {
   int index = 0;
   
   while (str[index] != '\0' && rhs.str[index] != '\0' && str[index] == rhs.str[index]) {
@@ -206,10 +205,10 @@ bool String::operator< (const String& rhs)  const {
 }
 
 
-String String::operator+ (const String& rhs) const {
+string_t string_t::operator+ (const string_t& rhs) const {
   int offset = length();
 
-  String result = String((offset + rhs.length() + 1), str);
+  string_t result = string_t((offset + rhs.length() + 1), str);
   
   int index = 0;
   while (rhs.str[index] != '\0') {
@@ -224,7 +223,7 @@ String String::operator+ (const String& rhs) const {
 }
 
 
-String& String::operator+=(String rhs) {
+string_t& string_t::operator+=(string_t rhs) {
   int offset = length();
   reset_capacity(offset + rhs.length() + 1);
 
@@ -240,57 +239,57 @@ String& String::operator+=(String rhs) {
 }
 
 
-char& String::operator[](int index) {
+char& string_t::operator[](int index) {
   return str[index];
 }
 
-char String::operator[](int index) const {
+char string_t::operator[](int index) const {
   return str[index];
 }
 
-std::ostream& operator<<(std::ostream& out, const String& data) {
+std::ostream& operator<<(std::ostream& out, const string_t& data) {
   for (int i = 0; i < data.length(); ++i) {
     out << data[i];
   }
   return out;
 }
 
-std::istream& operator>>(std::istream& in, String& word) {
+std::istream& operator>>(std::istream& in, string_t& word) {
   word = "";
   char raw_data[256];
   
   if (in >> raw_data) {
-    word = String(raw_data);
+    word = string_t(raw_data);
   }
  
   return in;
 }
 
-String operator+ (const char* lhs, const String& rhs) {
-  return String(lhs) + rhs;
+string_t operator+ (const char* lhs, const string_t& rhs) {
+  return string_t(lhs) + rhs;
 }
 
-String operator+ (char lhs, const String& rhs) {
-  return String(lhs) + rhs;
+string_t operator+ (char lhs, const string_t& rhs) {
+  return string_t(lhs) + rhs;
 }
 
-bool operator== (const char* lhs, const String& rhs) {
-  return String(lhs) == rhs;
+bool operator== (const char* lhs, const string_t& rhs) {
+  return string_t(lhs) == rhs;
 }
 
-bool operator== (char lhs, const String& rhs) {
-  return String(lhs) == rhs;
+bool operator== (char lhs, const string_t& rhs) {
+  return string_t(lhs) == rhs;
 }
 
-bool operator< (const char* lhs, const String& rhs) {
-  return String(lhs) < rhs;
+bool operator< (const char* lhs, const string_t& rhs) {
+  return string_t(lhs) < rhs;
 }
 
-bool operator< (char lhs, const String& rhs) {
-  return String(lhs) < rhs;
+bool operator< (char lhs, const string_t& rhs) {
+  return string_t(lhs) < rhs;
 }
 
-bool operator<= (const String& lhs, const String& rhs) {
+bool operator<= (const string_t& lhs, const string_t& rhs) {
   if (lhs == rhs || lhs < rhs) {
     return true;
   }
@@ -298,14 +297,14 @@ bool operator<= (const String& lhs, const String& rhs) {
   return false;
 }
 
-bool operator!= (const String& lhs, const String& rhs) {
+bool operator!= (const string_t& lhs, const string_t& rhs) {
   return (!(lhs == rhs));
 }
 
-bool operator>= (const String& lhs, const String& rhs) {
+bool operator>= (const string_t& lhs, const string_t& rhs) {
   return (!(lhs < rhs));
 }
 
-bool operator> (const String& lhs, const String& rhs) {
+bool operator> (const string_t& lhs, const string_t& rhs) {
   return (!(lhs <= rhs));
 }

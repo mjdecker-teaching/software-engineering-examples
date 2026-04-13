@@ -1,4 +1,4 @@
-//  String class test program
+//  string_ts class test program
 //
 //  Tests: operator+
 //
@@ -13,11 +13,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("ab");
-        String  right("xyz");
+        string_t  left("ab");
+        string_t  right("xyz");
 
         // TEST
-        String result;
+        string_t result;
         result = left + right;
 
         // VERIFY
@@ -31,10 +31,10 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  right("xyz");
+        string_t  right("xyz");
 
         // TEST
-        String result;
+        string_t result;
         result = "ab" + right;
 
         // VERIFY
@@ -48,11 +48,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("abc");
-        String  right("");
+        string_t  left("abc");
+        string_t  right("");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|abc| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -65,10 +65,10 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  right("abc");
+        string_t  right("abc");
         
         // TEST
-        String result = "" + right;
+        string_t result = "" + right;
         
         // VERIFY
         std::cout << "|abc| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -81,11 +81,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("");
-        String  right("xyz");
+        string_t  left("");
+        string_t  right("xyz");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|xyz| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -99,11 +99,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("");
-        String  right;
+        string_t  left("");
+        string_t  right;
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -116,11 +116,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left;
-        String  right('\0');
+        string_t  left;
+        string_t  right('\0');
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -133,11 +133,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("a");
-        String  right('x');
+        string_t  left("a");
+        string_t  right('x');
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|ax| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -150,10 +150,10 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  right("x");
+        string_t  right("x");
         
         // TEST
-        String result = 'a' + right;
+        string_t result = 'a' + right;
         
         // VERIFY
         std::cout << "|ax| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -166,11 +166,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("ab");
-        String  right("xyz");
+        string_t  left("ab");
+        string_t  right("xyz");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|abxyz| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -184,11 +184,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("abc");
-        String  right("xy");
+        string_t  left("abc");
+        string_t  right("xy");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|abcxy| == |" << result << "| && length == " << result.length() << " && Capacity == " << result.capacity() << std::endl;
@@ -201,14 +201,14 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("1234567890/n!#$%^6YHd");
-        String  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
+        string_t  left("1234567890/n!#$%^6YHd");
+        string_t  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
 $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567\
 890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd \
 123456789 0255");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "|1234567890/n!#$%^6YHd1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
@@ -231,14 +231,14 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("1548*1234567890/n!#$%^6YHd");
-        String  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
+        string_t  left("1548*1234567890/n!#$%^6YHd");
+        string_t  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
 $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567\
 890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd \
 123456789 0255");
         
         // TEST
-        String result = left + right;
+        string_t result = left + right;
         
         // VERIFY
         std::cout << "1548*|1234567890/n!#$%^6YHd1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
@@ -261,8 +261,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("ab");
-        String  right("xyz");
+        string_t  left("ab");
+        string_t  right("xyz");
 
         // TEST
         left += right;
@@ -278,8 +278,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("abc");
-        String  right("");
+        string_t  left("abc");
+        string_t  right("");
         
         // TEST
         left += right;
@@ -295,8 +295,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left;
-        String  right("xyz");
+        string_t  left;
+        string_t  right("xyz");
         
         // TEST
         left += right;
@@ -312,8 +312,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("");
-        String  right;
+        string_t  left("");
+        string_t  right;
         
         // TEST
         left += right;
@@ -328,8 +328,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left;
-        String  right('\0');
+        string_t  left;
+        string_t  right('\0');
         
         // TEST
         left += right;
@@ -344,8 +344,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("a");
-        String  right('x');
+        string_t  left("a");
+        string_t  right('x');
         
         // TEST
        left += right;
@@ -361,8 +361,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("ab");
-        String  right("xyz");
+        string_t  left("ab");
+        string_t  right("xyz");
         
         // TEST
 	left += right;
@@ -378,8 +378,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("abc");
-        String  right("xy");
+        string_t  left("abc");
+        string_t  right("xy");
         
         // TEST
         left += right;
@@ -394,8 +394,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("1234567890/n!#$%^6YHd");
-        String  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
+        string_t  left("1234567890/n!#$%^6YHd");
+        string_t  right("1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
 $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567\
 890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd \
 123456789 0255");
@@ -422,8 +422,8 @@ $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 123456
     }    {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  left("1234567890/n!#$%^6YHd");
-        String  right("poju!1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
+        string_t  left("1234567890/n!#$%^6YHd");
+        string_t  right("poju!1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#\
 $%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567\
 890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd 1234567890/n!#$%^6YHd \
 123456789 0255");

@@ -1,4 +1,4 @@
-//  String class test program
+//  string_t class test program
 //
 //  Tests: operator>
 //
@@ -13,13 +13,13 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  s1("ab");
-        String  s2("abc");
-        String  s3("ad");
-        String  s4("d");
-        String  s5("ab");
-        String  s6("a");
-        String  s7("");
+        string_t  s1("ab");
+        string_t  s2("abc");
+        string_t  s3("ad");
+        string_t  s4("d");
+        string_t  s5("ab");
+        string_t  s6("a");
+        string_t  s7("");
 
         // TEST
         std::cout << "s1 == " << s1 << std::endl;

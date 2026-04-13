@@ -1,4 +1,4 @@
-//  String class test program
+//  string_t class test program
 //
 //  Tests: copy ctor && destructor 
 //
@@ -9,7 +9,7 @@
 
 //===========================================================================
 
-void testCopy(String x, const char* c_str, int len) {
+void testCopy(string_t x, const char* c_str, int len) {
     // VERIFY
     assert(x == c_str);
     assert(x.length() == len);
@@ -22,7 +22,7 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("");
+        string_t  str("");
         
         // TEST
         
@@ -37,7 +37,7 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("abc");
+        string_t  str("abc");
         
         // TEST
         
@@ -52,7 +52,7 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("a987 s8djgk \n c");
+        string_t  str("a987 s8djgk \n c");
         
         // TEST
         
@@ -67,7 +67,7 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop");
+        string_t  str("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop");
         
         // TEST
         

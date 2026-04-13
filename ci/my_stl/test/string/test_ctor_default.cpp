@@ -1,6 +1,6 @@
-//  String class test program
+//  string_t class test program
 //
-//  Tests: String() - default ctor
+//  Tests: string_t() - default ctor
 //
 
 #include <string.hpp>
@@ -15,7 +15,7 @@ int main ()
         // SETUP FIXTURE
 
         // TEST
-        String  str;
+        string_t  str;
         std::cout << "|| == |" << str << "| && length == " << str.length() << " && Capacity == " << str.capacity() << std::endl;
 
         // VERIFY

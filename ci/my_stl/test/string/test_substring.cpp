@@ -1,6 +1,6 @@
-//  String class test program
+//  string_t class test program
 //
-//  Tests: substring
+//  Tests: substring_t
 //
 
 #include <string.hpp>
@@ -13,7 +13,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("grape");
+      string_t a("grape");
             
       // VERIFY
       assert(a.substr(0, 0) == "");
@@ -24,7 +24,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("beta testing the alpha code");
+      string_t a("beta testing the alpha code");
             
       // VERIFY
       assert(a.substr(2, 0) == "");
@@ -33,7 +33,7 @@ int main ()
       assert(a.substr(0, 27) == "beta testing the alpha code");
     }
 
-    std::cout << "Done testing find substring." << std::endl;
+    std::cout << "Done testing find substring_t." << std::endl;
     std::cout << "---------------------------------------------------------------------" << std::endl << std::endl;
     return 0;
 }

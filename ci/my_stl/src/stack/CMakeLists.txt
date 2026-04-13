@@ -1,3 +1,0 @@
-file(GLOB STACK_HEADERS *.hpp)
-
-install(FILES ${STACK_HEADERS} DESTINATION include)

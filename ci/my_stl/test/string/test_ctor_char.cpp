@@ -1,6 +1,6 @@
-//  String class test program
+//  string_t class test program
 //
-//  Tests: String(char) ctor
+//  Tests: string_t(char) ctor
 //
 
 #include <string.hpp>
@@ -15,7 +15,7 @@ int main ()
         // SETUP FIXTURE
         
         // TEST
-        String  str('\0');
+        string_t  str('\0');
         
         // VERIFY
         std::cout << "|| == |" << str << "| && length == " << str.length() << " && Capacity == " << str.capacity() << std::endl;
@@ -28,7 +28,7 @@ int main ()
         // SETUP FIXTURE
         
         // TEST
-        String  str('a');
+        string_t  str('a');
         
         // VERIFY
         std::cout << "|a| == |" << str << "| && length == " << str.length() << " && Capacity == " << str.capacity() << std::endl;
@@ -36,7 +36,7 @@ int main ()
         assert(str.length() == 1);
         assert(str.capacity() == 1);
     }
-    std::cout << "Done testing ctor String(char)." << std::endl;
+    std::cout << "Done testing ctor string_t(char)." << std::endl;
     std::cout << "---------------------------------------------------------------------" << std::endl << std::endl;
     return 0;
 }

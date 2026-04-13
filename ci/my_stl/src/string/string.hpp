@@ -1,36 +1,15 @@
-/**
- * @file string-interface.hpp
- *
- * @version 1.0
- * @date Spring 2017
- * @authors Dr. J. Maletic and Michael John Decker
- *
- * Interface definition of String class for use with test oracle.
- * For use with Project 2, milestone 2, 3, 4.
- *
- * To use the supplied test oracles you will need to use this interface and namings.
- * You must also have all of these methods and functions defined for your string class.
- *
- * You can NOT add any attributes/members.  If you do the test oracles will not work.
- *
- * You need to implement all of the methods and funcitons declared here.
- */
 
-#ifndef CS23001_STRING_INTERFACE_HPP
-#define CS23001_STRING_INTERFACE_HPP
+#ifndef INCLUDED_STRING
+#define INCLUDED_STRING
 
 #include <iostream>
 #include <vector>
-/**
- * @invariant str[length()] == 0
- *         && length()      == capacity()
- *         && capacity()    == stringSize - 1
- */
-class String {
+
+class string_t {
 private:
     // helper constructors and methods
-    String(int);
-    String(int, const char *);
+    string_t(int);
+    string_t(int, const char *);
     void reset_capacity (int);
 
     char * str;
@@ -40,16 +19,16 @@ private:
 
 public:
 
-    // constructor: empty string, String('x'), and String("abcd")
-    String();
-    String(char);
-    String(const char *);
+    // constructor: empty string_t, string_t('x'), and string_t("abcd")
+    string_t();
+    string_t(char);
+    string_t(const char *);
 
     // copy ctor, destructor, constant time swap, and assignment
-    String(const String &);
-    ~String();
-    void     swap          (String &);
-    String & operator=     (String);
+    string_t(const string_t &);
+    ~string_t();
+    void     swap          (string_t &);
+    string_t & operator=     (string_t);
 
     // subscript: accessor/modifier and accessor
     char & operator[](int);
@@ -57,43 +36,43 @@ public:
 
     // max chars that can be stored (not including null terminator)
     int capacity()      const;
-    // number of char in string
+    // number of char in string_t
     int length  ()      const;
     
-    // substring
-    String substr(int start_pos, int count) const;
+    // substring_t
+    string_t substr(int start_pos, int count) const;
     
-    // split a string with char delimiter
-    std::vector<String> split(char) const;
+    // split a string_t with char delimiter
+    std::vector<string_t> split(char) const;
 
-    // find char / string index
+    // find char / string_t index
     int find(char ch, int start_pos) const;
-    int find(const String & s, int start_pos) const;
+    int find(const string_t & s, int start_pos) const;
 
     // concatenation
-    String   operator+ (const String &) const;
-    String & operator+=(String);
+    string_t   operator+ (const string_t &) const;
+    string_t & operator+=(string_t);
 
     // relational methods
-    bool operator==(const String &)  const;
-    bool operator< (const String &)  const;
+    bool operator==(const string_t &)  const;
+    bool operator< (const string_t &)  const;
 
     // i/o
-    friend std::ostream& operator<<(std::ostream &, const String &);
-    friend std::istream& operator>>(std::istream &, String &);
+    friend std::ostream& operator<<(std::ostream &, const string_t &);
+    friend std::istream& operator>>(std::istream &, string_t &);
 
 };
 
 // free functios for concatenation and relational
-String operator+       (const char *,   const String &);
-String operator+       (char,           const String &);
-bool   operator==      (const char *,   const String &);
-bool   operator==      (char,           const String &);
-bool   operator<       (const char *,   const String &);
-bool   operator<       (char,           const String &);
-bool   operator<=      (const String &, const String &);
-bool   operator!=      (const String &, const String &);
-bool   operator>=      (const String &, const String &);
-bool   operator>       (const String &, const String &);
+string_t operator+     (const char *,     const string_t &);
+string_t operator+     (char,             const string_t &);
+bool   operator==      (const char *,     const string_t &);
+bool   operator==      (char,             const string_t &);
+bool   operator<       (const char *,     const string_t &);
+bool   operator<       (char,             const string_t &);
+bool   operator<=      (const string_t &, const string_t &);
+bool   operator!=      (const string_t &, const string_t &);
+bool   operator>=      (const string_t &, const string_t &);
+bool   operator>       (const string_t &, const string_t &);
 
 #endif

@@ -1,4 +1,4 @@
-//  String class test program
+//  string_t class test program
 //
 //  Tests: find char
 //
@@ -13,7 +13,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a;
+      string_t a;
       
       // VERIFY
       assert(a.find('a', 0) == -1);
@@ -26,7 +26,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("graape");
+      string_t a("graape");
       
       // VERIFY
       assert(a.find('a', 0) == 2);

@@ -1,6 +1,6 @@
-//  String class test program
+//  string_t class test program
 //
-//  Tests: String(char[]) ctor
+//  Tests: string_t(char[]) ctor
 //
 
 #include <string.hpp>
@@ -13,28 +13,28 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("abc");
-	String  s;
+        string_t  str("abc");
+        string_t  s;
 
-	// TEST
-	s = str;
+        // TEST
+        s = str;
 
         // VERIFY
         assert(str == "abc");
-	assert(str.length() == 3);
+        assert(str.length() == 3);
         assert(str.capacity() == 3);
         assert(s == "abc");
-	assert(s.length() == 3);
+        assert(s.length() == 3);
         assert(s.capacity() == 3);
     }
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("");
-	String  s;
-	   
+        string_t  str("");
+        string_t  s;
+           
         // TEST
-     	s = str;
+             s = str;
 
         // VERIFY
         assert(str == "");
@@ -47,28 +47,28 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x");
-	String  s("10");
+        string_t  str("x");
+        string_t  s("10");
         
         // TEST
-	s = str;
+        s = str;
         
         // VERIFY
         assert(str == "x");
         assert(str.length() == 1);
         assert(str.capacity() == 1);
-	assert(s == "x");
+        assert(s == "x");
         assert(s.length() == 1);
         assert(s.capacity() == 1);
     }
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x3231321654987654321");
-	String  s("10");
+        string_t  str("x3231321654987654321");
+        string_t  s("10");
         
         // TEST
-	s = str;
+        s = str;
         
         // VERIFY
         assert(str == "x3231321654987654321");
@@ -81,79 +81,79 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x2");
-	String  s("105649873216827");
+        string_t  str("x2");
+        string_t  s("105649873216827");
         
         // TEST
-	s = str;
+        s = str;
         
         // VERIFY
         assert(str == "x2");
         assert(str.length() == 2);
         assert(str.capacity() == 2);
-	assert(s == "x2");
+        assert(s == "x2");
         assert(s.length() == 2);
         assert(s.capacity() == 2);
     }
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("");
-	String  s;
+        string_t  str("");
+        string_t  s;
         
         // TEST
-	s.swap(str);
+        s.swap(str);
         
         // VERIFY
         assert(str == "");
         assert(str.length() == 0);
         assert(str.capacity() == 0);
-	assert(s == "");
+        assert(s == "");
         assert(s.length() == 0);
         assert(s.capacity() == 0);
     }
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("abc");
-	String  s;
+        string_t  str("abc");
+        string_t  s;
         
         // TEST
-	s.swap(str);
+        s.swap(str);
         
         // VERIFY
         assert(str == "");
         assert(str.length() == 0);
         assert(str.capacity() == 0);
-	assert(s == "abc");
+        assert(s == "abc");
         assert(s.length() == 3);
         assert(s.capacity() == 3);
     }
         {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x");
-	String  s("10");
+        string_t  str("x");
+        string_t  s("10");
         
         // TEST
-	s.swap(str);
+        s.swap(str);
         
         // VERIFY
         assert(str == "10");
         assert(str.length() == 2);
         assert(str.capacity() == 2);
-	assert(s == "x");
+        assert(s == "x");
         assert(s.length() == 1);
         assert(s.capacity() == 1);
     }
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x3231321654987654321");
-	String  s("10");
+        string_t  str("x3231321654987654321");
+        string_t  s("10");
         
         // TEST
-	s.swap(str);
+        s.swap(str);
         
         // VERIFY
         assert(s == "x3231321654987654321");
@@ -166,11 +166,11 @@ int main ()
     {
         //------------------------------------------------------
         // SETUP FIXTURE
-        String  str("x2");
-	String  s("105649873216827");
+        string_t  str("x2");
+        string_t  s("105649873216827");
         
         // TEST
-	s.swap(str);
+        s.swap(str);
         
         // VERIFY
         assert(str == "105649873216827");
@@ -180,7 +180,7 @@ int main ()
         assert(s.length() == 2);
         assert(s.capacity() == 2);
     }
-    std::cout << "Done testing ctor String(char[])." << std::endl;
+    std::cout << "Done testing ctor string_t(char[])." << std::endl;
     std::cout << "---------------------------------------------------------------------" << std::endl << std::endl;
     return 0;
 }

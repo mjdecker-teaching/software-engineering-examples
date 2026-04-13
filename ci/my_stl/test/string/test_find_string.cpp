@@ -1,4 +1,4 @@
-//  String class test program
+//  string_t class test program
 //
 //  Tests: find char
 //
@@ -13,7 +13,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("grape");
+      string_t a("grape");
             
       // VERIFY
       assert(a.find("ape", 0) == 2);
@@ -25,7 +25,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("graape");
+      string_t a("graape");
       
       // VERIFY
       assert(a.find("ape", 0) == 3);
@@ -37,7 +37,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("pineconeapple");
+      string_t a("pineconeapple");
       
       // VERIFY
       assert(a.find("cone", 0) == 4);
@@ -49,7 +49,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("pineconepine");
+      string_t a("pineconepine");
       
       // VERIFY
       assert(a.find("pine", 0) == 0);
@@ -60,7 +60,7 @@ int main ()
     {
       //------------------------------------------------------
       // SETUP FIXTURE
-      String a("pineconepine");
+      string_t a("pineconepine");
       
       // VERIFY
       assert(a.find("pintglass", 0) == -1);
@@ -70,7 +70,7 @@ int main ()
       assert(a.find("elfears", 10) == -1);
     }    
 
-    std::cout << "Done testing find string." << std::endl;
+    std::cout << "Done testing find string_t." << std::endl;
     std::cout << "---------------------------------------------------------------------" << std::endl << std::endl;
     return 0;
 }
