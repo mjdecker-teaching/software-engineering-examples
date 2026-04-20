@@ -7,3 +7,4 @@ include(CTest)
 include_directories(src/string src/set)
 
 add_subdirectory(src)
+add_subdirectory(test)
